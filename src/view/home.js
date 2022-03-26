@@ -1,15 +1,15 @@
 export default () => {
     const viewHome = `
     <figure class="text-center">
-    <img class="image" src="https://i.imgur.com/p8blMIY.jpg" alt="collage">
-    <img class="image" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
-    <h2 class="text-center">Se un viajero, te ayudamos a  descubrir lugares y llear tu vida de aventuras.</h2>
-    <button class="botons" type="submit" id="btn-google"><i class="fa-brands fa-google"></i>continuar con Google</button>
-    <p>Correo electrónico</p>
+    <img class="imageCollage" src="https://i.imgur.com/p8blMIY.jpg" alt="collage">
+    <img class="imageLogo" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <h2 class="text-center">Se un viajero, te ayudamos a  descubrir lugares y llenar tu vida de aventuras.</h2>
+    <button class="botons" type="submit" id="btn-google"><i class="fa-brands fa-google"></i> continuar con Google</button>
+    <p class="text">Correo electrónico</p>
     <input class="email" type="email" placeholder="Ingresa tu correo">
-    <p>Contraseña</p>
-    <input class="password" type="password" placeholder="Ingresa tu contraseña">
-    <button class="botons" type="submit" id="sing-in">INGRESAR</button>
+    <p class="text">Contraseña</p>
+    <input class="password" type="password" placeholder="Ingresa tu contraseña"><br> 
+    <button class="botons" type="submit" id="sing-in">INGRESAR</button><br> 
     <button class="botons" type="submit" id="create-account">CREAR CUENTA</button>
     </figure>
     `
