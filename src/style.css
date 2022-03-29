@@ -1,37 +1,68 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-@media (max-width: 480px) {
-
 body {
  background-color: #fdf9da;
 }
 
-.imageCollage {
- width: 95%;
- height: 15%;
- display: flex;
- align-content: center;
- justify-content: center;
+.botonsHome li{
+
+ list-style: none;
 }
 
-.imageLogo {
+.headerImage {
  width: 85%;
  height: 15%;
  display: flex;
  align-content: center;
  justify-content: center;
- margin-top: 20px;
+ margin: 20px auto;
 }
 
-.text-center {
+.text-welcome {
+ text-align: center;
+ font-size: 15px;
+ font-family: Verdana;
+}
+
+#btn-google {
+ width: 65%;
+ margin-top: 20px;
+ padding: 10px 20px 10px 20px;
+ font-family: Arial;
+ font-size: 16px;
+ font-weight: bold;
+ background-color: #f3c468;
+ border: none;
+ border-radius: 10px;
+ box-shadow: 2px 8px 8px rgb(117, 115, 115);
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.text {
+ margin-top: 30px;
  font-family: Verdana;
  font-size: 17px;
- text-align: center;
- margin-top: 20px;
+ margin-left: 8%;
+}
+
+.email {
+ margin-top: 10px;
+ font-family: Verdana;
+ font-size: 17px;
+ border: 1px solid black;
+ display: flex;
+ margin-left: 10%;
+}
+
+.password {
+ margin-top: 10px;
+ font-family: Verdana;
+ font-size: 17px;
+ border: 1px solid black;
+ display: flex;
+ margin-left: 10%;
 }
 
 .botons {
@@ -44,45 +75,28 @@ body {
  border: none;
  border-radius: 10px;
  box-shadow: 2px 8px 8px rgb(117, 115, 115);
- text-align: center;
-}
-
-.text {
- margin-top: 20px;
- font-family: Verdana;
- font-size: 17px;
- text-align: left;
-}
-
-.email {
- margin-top: 10px;
- font-family: Verdana;
- font-size: 17px;
- border: 1px solid black;
- padding: 6px 40px 6px 40px;
-}
-
-.password {
- margin-top: 10px;
- font-family: Verdana;
- font-size: 17px;
- border: 1px solid black;
- padding: 6px 40px 6px 40px;
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 #create-account {
  margin-top: 40px;
 }
 
-.footer {
+#footer {
  margin-top: 45px; 
  text-align: center;
+ font-family: Verdana;
+ background-color: #ffdcae;
 }
-
-#text {
+/*formulario de registro*/
+#textRegister {
  margin-top: 20px;  
- font-size: 22px;
+ font-family: Verdana;
+ font-size: 20px;
  font-weight: bold;
+ text-align: center;
 }
 
 #name {
@@ -90,7 +104,8 @@ body {
  font-family: Verdana;
  font-size: 17px;
  border: 1px solid black;
- padding: 6px 40px 6px 40px;   
+ display: flex;
+ margin-left: 10%;
 }
 
 #lastName {
@@ -98,7 +113,7 @@ body {
  font-family: Verdana;
  font-size: 17px;
  border: 1px solid black;
- padding: 6px 40px 6px 40px;
+ display: flex;
+ margin-left: 10%;
 }
 
-}

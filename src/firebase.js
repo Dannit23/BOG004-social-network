@@ -22,6 +22,8 @@
 
   //Dentro de una funcion
   const auth = getAuth();
+
+  export const register = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in
@@ -33,3 +35,4 @@
     const errorMessage = error.message;
     // ..
   });
+}
