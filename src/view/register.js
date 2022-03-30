@@ -1,4 +1,4 @@
-import { register } from '../firebase.js';
+import { register } from '../firebase/firebase.js';
 
 export default () => {
     const viewRegister = `
