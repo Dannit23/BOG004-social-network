@@ -1,8 +1,9 @@
-import { register } from '../firebase/firebase.js';
+import  { register }  from '../firebase/firebase.js';
 
 export default () => {
     const viewRegister = `
-     <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <form id="registerUser">
+    <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <p id="textRegister">Registrate</p>
     <p class="text">Nombre</p>
     <input class="text" type="text" id="name" placeholder="Ingresa tu nombre">
@@ -11,13 +12,38 @@ export default () => {
     <p class="text">Correo electrónico</p>
     <input class="email" id="email" type="email" placeholder="Ingresa tu correo">
     <p class="text">Nueva contraseña</p>
-    <input class="password" type="password" placeholder="Ingresa tu contraseña">
+    <input class="password" type="password" id="password" placeholder="Ingresa tu contraseña">
     <button class="botons" type="submit" id="create-account">CREAR CUENTA</button>
-    `
+    </form>
+    `;
     const divElem = document.createElement('div');
     divElem.innerHTML = viewRegister;
-    /*  const email = divElem.querySelector('#email').value;
+
+    const registerUser = divElem.querySelector('#registerUser');
+    registerUser.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = divElem.querySelector("#name").value;
+        const lastName = divElem.querySelector("#lastName").value;
+        const email = divElem.querySelector('#email').value;
+        const password = divElem.querySelector('#password').value;
+        registerUser.reset();
+        register(email, password, name, lastName); 
+    })
+
+        /* const createAccountButton = document.getElementById("create-account");
+        console.log("cargando el botón ${createAccountButton}");
+        createAccountButton.addEventListener('click', () =>{
+            const nameValidation = document.getElementById("name").value;
+            const lastNameValidation = document.getElementById("lastName").value;
+            const emailValidation = document.getElementById("email").value;
+            const passwordValidation = document.getElementById("password").value;
+    
+            register(nameValidation,lastNameValidation, emailValidation)
+        }); */
+        return divElem; 
+    }
+    
+    /* const email = divElem.querySelector('#email').value;    
      console.log(email)
-     register(email, password) */
-    return divElem;
-}
+     register(email, password)*/
+    

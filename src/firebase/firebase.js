@@ -25,46 +25,48 @@
   const auth = getAuth();
 
   /* Crear una cuenta con email y password, donde usamos la libreria de Firebase */
-  export const register = (email, password, nombres, apellidos) => {
+  export const register = (email, password, name, lastName) => {
     //Creamos un usuario con email y contraseña
+    console.log(email, password);
     createUserWithEmailAndPassword(auth, email, password)
     //Si todo sale bien tendremos un resultado positivo
-      .then((userProfile) => {
-        //Actualizar el nombre con el que el usuario digito
+    .then((userProfile) => {
+      //Actualizar el nombre con el que el usuario digito
+      console.log(userProfile);
       userProfile.user.updateProfile({
-      displayName: nombres,
-      displayLastName: apellidos
-    })
+        displayName: name,
+        displayLastName: lastName
+      })
 
-    //Firebase coloque un botón de continuiar, para que muestre el link y redireccione a nuestra pág
-    const config = {
-      url: 'http://localhost:3000/#/'
-    } 
+      //Firebase coloque un botón de continuiar, para que muestre el link y redireccione a nuestra pág
+      const config = {
+        url: 'http://localhost:3000/#/'
+      } 
 
-    //Buena práctica de seguridad: Enviarle un correo de verificación a su cuenta, para saber si en verdad es esa persona quien dice ser
-    userProfile.sendEmailVerification(config).catch((error) => {
-      console.error(error)
-      Materialize.toast(error.message, 4000)
-    })
+      //Buena práctica de seguridad: Enviarle un correo de verificación a su cuenta, para saber si en verdad es esa persona quien dice ser
+      userProfile.sendEmailVerification(config).catch((error) => {
+        console.error(error)
+        Materialize.toast(error.message, 4000)
+      })
     
-    //No guarde la información en el Browser hasta que no haga click en el link que le llega al correo al usuario
-    getAuth().signOut()
+      //No guarde la información en el Browser hasta que no haga click en el link que le llega al correo al usuario
+      getAuth().signOut()
 
-    //Mensaje de bienvenida
-    Materialize.toast(
-      `Bienvenid@ ${nombres, apellidos}, debes realizar el proceso de verificación`, 4000
-    )
+      //Mensaje de bienvenida
+      Materialize.toast(
+        `Bienvenid@ ${nombres, apellidos}, debes realizar el proceso de verificación`, 4000
+      )
 
-    //Aquí cerramos la ventana
-    $('.modal').modal('close')
-  })
-  //Capturar si existe algún error
-  .catch((error) => {
-    console.error(error)
-    //Se le muestra al usuario
-    Materialize.toast(error.message, 4000)
-    /* const errorCode = error.code;
-    const errorMessage = error.message; */
-    // ..
-  });
-}
+      //Aquí cerramos la ventana
+      $('.modal').modal('close')
+    })
+    //Capturar si existe algún error
+    .catch((error) => {
+      //console.error(error)
+      //Se le muestra al usuario
+      //Materialize.toast(error.message, 4000)
+      const errorCode = error.code;
+      const errorMessage = error.message; 
+      // ..
+    });
+  }
