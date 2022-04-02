@@ -1,7 +1,6 @@
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,50 +22,20 @@
   //Dentro de una funcion
   //Utilizamos los servicios de Firebase, tenemos todas las funciones para gestionar, crear, autenticar de nuestros usuarios
   const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+  console.log (provider)
 
-  /* Crear una cuenta con email y password, donde usamos la libreria de Firebase */
-  export const register = (email, password, name, lastName) => {
-    //Creamos un usuario con email y contraseña
-    console.log(email, password);
-    createUserWithEmailAndPassword(auth, email, password)
-    //Si todo sale bien tendremos un resultado positivo
-    .then((userProfile) => {
-      //Actualizar el nombre con el que el usuario digito
-      console.log(userProfile);
-      userProfile.user.updateProfile({
-        displayName: name,
-        displayLastName: lastName
-      })
+  export const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password)
+  };
+  
+  export const signGoogle = () => {
+    return signInWithPopup(auth, provider)
+  }; 
+ 
+  export const existingUser = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password)
+  };
 
-      //Firebase coloque un botón de continuiar, para que muestre el link y redireccione a nuestra pág
-      const config = {
-        url: 'http://localhost:3000/#/'
-      } 
 
-      //Buena práctica de seguridad: Enviarle un correo de verificación a su cuenta, para saber si en verdad es esa persona quien dice ser
-      userProfile.sendEmailVerification(config).catch((error) => {
-        console.error(error)
-        Materialize.toast(error.message, 4000)
-      })
-    
-      //No guarde la información en el Browser hasta que no haga click en el link que le llega al correo al usuario
-      getAuth().signOut()
-
-      //Mensaje de bienvenida
-      Materialize.toast(
-        `Bienvenid@ ${nombres, apellidos}, debes realizar el proceso de verificación`, 4000
-      )
-
-      //Aquí cerramos la ventana
-      $('.modal').modal('close')
-    })
-    //Capturar si existe algún error
-    .catch((error) => {
-      //console.error(error)
-      //Se le muestra al usuario
-      //Materialize.toast(error.message, 4000)
-      const errorCode = error.code;
-      const errorMessage = error.message; 
-      // ..
-    });
-  }
+  

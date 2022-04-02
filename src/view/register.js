@@ -1,4 +1,4 @@
-import  { register }  from '../firebase/firebase.js';
+import  { register }  from '../firebase/firebase-controller.js'
 
 export default () => {
     const viewRegister = `
@@ -26,24 +26,11 @@ export default () => {
         const lastName = divElem.querySelector("#lastName").value;
         const email = divElem.querySelector('#email').value;
         const password = divElem.querySelector('#password').value;
-        registerUser.reset();
+        /* registerUser.reset(); */
         register(email, password, name, lastName); 
-    })
-
-        /* const createAccountButton = document.getElementById("create-account");
-        console.log("cargando el botón ${createAccountButton}");
-        createAccountButton.addEventListener('click', () =>{
-            const nameValidation = document.getElementById("name").value;
-            const lastNameValidation = document.getElementById("lastName").value;
-            const emailValidation = document.getElementById("email").value;
-            const passwordValidation = document.getElementById("password").value;
+    });
+    return divElem; 
+};
     
-            register(nameValidation,lastNameValidation, emailValidation)
-        }); */
-        return divElem; 
-    }
-    
-    /* const email = divElem.querySelector('#email').value;    
-     console.log(email)
-     register(email, password)*/
+  
     
