@@ -1,3 +1,4 @@
+import { changeView } from "../view-controler/router.js";
 import { createUser, signGoogle, existingUser } from "./firebase.js";
 /* Crear una cuenta con email y password, donde usamos la libreria de Firebase */
 export const register = (email, password, name, lastName) => {
@@ -22,7 +23,7 @@ export const gmail = () => {
       // const credential = GoogleAuthProvider.credentialFromResult(result);
       // const token = credential.accessToken;
       // const user = result.user;
-      window.location.hash = '#/wall';
+      changeView('#/wall')
     })
     // .catch((error) => {
     //   const errorCode = error.code;
@@ -37,9 +38,9 @@ export const signIn = (email, password) => {
   console.log(email, password);
   existingUser(email, password)
   //Si todo sale bien tendremos un resultado positivo
-  .then((userCredential) => {
+  .then(() => {
     // Signed in
-    const user = userCredential.user;
+    changeView('#/wall')
   })
   .catch((error) => {
       const errorCode = error.code;

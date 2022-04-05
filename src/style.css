@@ -3,7 +3,6 @@ body {
 }
 
 .botonsHome li{
-
  list-style: none;
 }
 
@@ -19,7 +18,7 @@ body {
 .text-welcome {
  text-align: center;
  font-size: 15px;
- font-family: Verdana;
+ font-family: Arial;
 }
 
 #btn-google {
@@ -42,9 +41,9 @@ body {
 
 .text {
  margin-top: 30px;
- font-family: Verdana;
+ font-family: Arial;
  font-size: 17px;
- margin-left: 8%;
+ text-align: center;
 }
 
 .email {
@@ -53,7 +52,8 @@ body {
  font-size: 17px;
  border: 1px solid black;
  display: flex;
- margin-left: 10%;
+ margin: auto;
+ text-align: center;
 }
 
 .password {
@@ -62,7 +62,8 @@ body {
  font-size: 17px;
  border: 1px solid black;
  display: flex;
- margin-left: 10%;
+ margin: auto;
+ text-align: center;
 }
 
 .botons {
@@ -94,7 +95,7 @@ body {
 /*formulario de registro*/
 #textRegister {
  margin-top: 20px;  
- font-family: Verdana;
+ font-family: Arial;
  font-size: 20px;
  font-weight: bold;
  text-align: center;
@@ -106,7 +107,8 @@ body {
  font-size: 17px;
  border: 1px solid black;
  display: flex;
- margin-left: 10%;
+ margin: auto;
+ text-align: center;
 }
 
 #lastName {
@@ -115,6 +117,23 @@ body {
  font-size: 17px;
  border: 1px solid black;
  display: flex;
- margin-left: 10%;
+ margin: auto;
+ text-align: center;
 }
 
+/* Vista muro */
+#signOff{
+ display: flex;
+}
+
+#sign-off{
+ margin: auto;
+ padding: 6px 8px 6px 8px;
+ font-size: 13px;
+}
+
+#logoSmall {
+ width: 67%;
+ 
+ 
+}

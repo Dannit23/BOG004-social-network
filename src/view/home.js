@@ -2,6 +2,9 @@ import { gmail, signIn } from '../firebase/firebase-controller.js';
 import { changeView } from '../view-controler/router.js';
 export default () => {
     const viewHome = `
+    <div>
+    <a href="#/"><button class="botonsHome">Travesias Colombia</button></a>
+    </div>
     <form id="registerGoogle">
     <img class="headerImage" src="https://i.imgur.com/p8blMIY.jpg" alt="collage">
     <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">

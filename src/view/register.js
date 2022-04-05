@@ -2,6 +2,9 @@ import  { register }  from '../firebase/firebase-controller.js'
 
 export default () => {
     const viewRegister = `
+    <div>
+    <a href="#/register"><button class="botonsHome">registro</button></a>
+    </div>
     <form id="registerUser">
     <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <p id="textRegister">Registrate</p>
