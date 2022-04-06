@@ -1,3 +1,4 @@
+import { app } from "./firebase.js";
 import { changeView } from "../view-controler/router.js";
 import { createUser, signGoogle, existingUser } from "./firebase.js";
 /* Crear una cuenta con email y password, donde usamos la libreria de Firebase */
