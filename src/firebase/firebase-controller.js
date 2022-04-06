@@ -1,11 +1,10 @@
-import { app } from "./firebase.js";
 import { changeView } from "../view-controler/router.js";
-import { createUser, signGoogle, existingUser } from "./firebase.js";
+import { createUser, signGoogle, existingUser, app } from "./firebase.js";
 /* Crear una cuenta con email y password, donde usamos la libreria de Firebase */
 export const register = (email, password, name, lastName) => {
     //Creamos un usuario con email y contraseña
     console.log(email, password);
-    createUser(email, password)
+    return createUser(email, password)
     //Si todo sale bien tendremos un resultado positivo
     .then(() => {
       //redirecciona al muro
@@ -13,13 +12,14 @@ export const register = (email, password, name, lastName) => {
     })
     .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message; 
+        const errorMessage = error.message;
+        console.log(error.message) 
     });
 };
 /*Logueo con cuenta google*/
 export const gmail = () => {
  //implementamos el logueo con nuevo proveedor de google
-   signGoogle()
+   return signGoogle()
     .then(() => {
       // const credential = GoogleAuthProvider.credentialFromResult(result);
       // const token = credential.accessToken;
@@ -37,7 +37,7 @@ export const gmail = () => {
 export const signIn = (email, password) => {
   //Inicia sesión usuario con email y contraseña
   console.log(email, password);
-  existingUser(email, password)
+  return existingUser(email, password)
   //Si todo sale bien tendremos un resultado positivo
   .then(() => {
     // Signed in

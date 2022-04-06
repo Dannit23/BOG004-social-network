@@ -6,6 +6,7 @@ const changeView = (route) => {
     const container = document.getElementById('container')
     container.innerHTML = '';
     switch (route) {
+        case '': { return container.appendChild(components.home()) }
         case '#/': { return container.appendChild(components.home()) }
         case '#/register': { return container.appendChild(components.register()) }    
         case '#/wall': { return container.appendChild(components.wall()) }

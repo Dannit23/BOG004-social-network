@@ -1,10 +1,10 @@
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from './firebaseImport';
+  import { initializeApp } from './firebaseImport.js';
   import { getAuth, 
     createUserWithEmailAndPassword, 
     signInWithPopup, 
     GoogleAuthProvider, 
-    signInWithEmailAndPassword } from './firebaseImport';
+    signInWithEmailAndPassword } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,19 +25,21 @@
 
   //Dentro de una funcion
   //Utilizamos los servicios de Firebase, tenemos todas las funciones para gestionar, crear, autenticar de nuestros usuarios
-  const auth = getAuth();
-  const provider = new GoogleAuthProvider();
-  console.log (provider)
-
+  
   export const createUser = (email, password) => {
+    const auth = getAuth();
     return createUserWithEmailAndPassword(auth, email, password)
   };
   
   export const signGoogle = () => {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+    console.log (provider)
     return signInWithPopup(auth, provider)
   }; 
  
   export const existingUser = (email, password) => {
+    const auth = getAuth();
     return signInWithEmailAndPassword(auth, email, password)
   };
 
