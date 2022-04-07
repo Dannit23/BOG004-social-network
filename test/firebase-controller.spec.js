@@ -15,8 +15,9 @@ describe('register', () => {
 //testeamos la funcion de gmail, para verificar que redirecciona a la vista del muro
   describe('gmail', () => {
     it('debería retornar el redireccionamiento a la vista del muro', () => {
+      document.body.innerHTML = '<section id="container"></section>'
       gmail().then(()=>{
-        expect(changeView).toBe("#/wall") 
+        expect(window.location.hash).toBe("#/wall") 
       }) 
      
     })
@@ -26,7 +27,7 @@ describe('register', () => {
   describe('signIn', () => {
     it('debería retornar el redireccionamiento a la vista del muro', () => {
         signIn("email", "password").then(()=>{
-        expect(changeView).toBe("#/wall") 
+        expect(window.location.hash).toBe("#/wall") 
       }) 
      
     })

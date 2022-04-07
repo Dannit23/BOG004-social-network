@@ -12,8 +12,23 @@ export const register = (email, password, name, lastName) => {
     })
     .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(error.message) 
+        console.log(errorCode)
+        const notification = divElem.querySelector('#notification');
+        console.log(notification);
+        switch (errorCode) {
+          case 'auth/invalid-email':
+            notification.innerText = '¡Correo Invalido!';
+            break;
+          case 'auth/email-already-in-use':
+            notification.innerText = '¡Este correo ya está registrado!';
+            break;
+          case 'auth/weak-password':
+            notification.innerText = '¡La contraseña debe tener mínimo 6 carácteres!';
+            break;
+          default:
+            break;
+        }
+         
     });
 };
 /*Logueo con cuenta google*/
@@ -46,6 +61,7 @@ export const signIn = (email, password) => {
   .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message; 
+      console.log(error.message) 
   });
 };
 

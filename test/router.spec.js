@@ -1,6 +1,6 @@
 import { changeView } from '../src/view-controler/router.js';
 
-jest.mock('../src/firebase/firebaseImport');
+jest.mock('../src/firebase/firebaseImport.js');
 
 describe('ruteo', () => {
     it('debería retornar la ruta de cada componente', () => {

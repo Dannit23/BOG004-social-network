@@ -14,6 +14,7 @@ export default () => {
     <input class="text" type="text" id="lastName" placeholder="Ingresa tu apellido">
     <p class="text">Correo electrónico</p>
     <input class="email" id="email" type="email" placeholder="Ingresa tu correo">
+    <div id="notification"> </div>
     <p class="text">Nueva contraseña</p>
     <input class="password" type="password" id="password" placeholder="Ingresa tu contraseña">
     <button class="botons" type="submit" id="create-account">CREAR CUENTA</button>
@@ -29,6 +30,8 @@ export default () => {
         const lastName = divElem.querySelector("#lastName").value;
         const email = divElem.querySelector('#email').value;
         const password = divElem.querySelector('#password').value;
+        const errorMessage = divElem.querySelector('#notification');
+        errorMessage.innerHTML = '' ;
         /* registerUser.reset(); */
         register(email, password, name, lastName); 
     });
