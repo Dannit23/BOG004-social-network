@@ -10,26 +10,7 @@ export const register = (email, password, name, lastName) => {
       //redirecciona al muro
       window.location.hash = '#/wall';
     })
-    .catch((error) => {
-        const errorCode = error.code;
-        console.log(errorCode)
-        const notification = divElem.querySelector('#notification');
-        console.log(notification);
-        switch (errorCode) {
-          case 'auth/invalid-email':
-            notification.innerText = '¡Correo Invalido!';
-            break;
-          case 'auth/email-already-in-use':
-            notification.innerText = '¡Este correo ya está registrado!';
-            break;
-          case 'auth/weak-password':
-            notification.innerText = '¡La contraseña debe tener mínimo 6 carácteres!';
-            break;
-          default:
-            break;
-        }
-         
-    });
+    
 };
 /*Logueo con cuenta google*/
 export const gmail = () => {
@@ -58,11 +39,7 @@ export const signIn = (email, password) => {
     // Signed in
     changeView('#/wall')
   })
-  .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message; 
-      console.log(error.message) 
-  });
+  
 };
 
 

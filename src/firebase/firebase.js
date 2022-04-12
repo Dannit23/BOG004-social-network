@@ -4,7 +4,10 @@
     createUserWithEmailAndPassword, 
     signInWithPopup, 
     GoogleAuthProvider, 
-    signInWithEmailAndPassword } from './firebaseImport.js';
+    signInWithEmailAndPassword,
+    getFirestore,
+    collection,
+    addDoc } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,10 +25,11 @@
 
   // Initialize Firebase
   export const app = initializeApp(firebaseConfig);
+   
+  const db = getFirestore()
 
   //Dentro de una funcion
   //Utilizamos los servicios de Firebase, tenemos todas las funciones para gestionar, crear, autenticar de nuestros usuarios
-  
   export const createUser = (email, password) => {
     const auth = getAuth();
     return createUserWithEmailAndPassword(auth, email, password)
@@ -43,5 +47,9 @@
     return signInWithEmailAndPassword(auth, email, password)
   };
 
-
+  //Se exporta una funcion para guardar la información en firestore
+  export const savePost = (comentText) => {
+    //para llamar la base de datos con su nombre
+    addDoc(collection(db, 'publications')
+  };
   

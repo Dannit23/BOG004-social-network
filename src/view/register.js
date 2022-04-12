@@ -30,10 +30,27 @@ export default () => {
         const lastName = divElem.querySelector("#lastName").value;
         const email = divElem.querySelector('#email').value;
         const password = divElem.querySelector('#password').value;
-        const errorMessage = divElem.querySelector('#notification');
-        errorMessage.innerHTML = '' ;
         /* registerUser.reset(); */
-        register(email, password, name, lastName); 
+        register(email, password, name, lastName).catch((error) => {
+            const errorCode = error.code;
+            console.log(errorCode)
+            const notification = divElem.querySelector('#notification');
+            console.log(notification);
+            switch (errorCode) {
+              case 'auth/invalid-email':
+                notification.innerText = '⛔ ¡Correo Invalido!';
+                break;
+              case 'auth/email-already-in-use':
+                notification.innerText = '🚫 ¡Este correo ya está registrado!';
+                break;
+              case 'auth/weak-password':
+                notification.innerText = '⛔ ¡La contraseña debe tener mínimo 6 carácteres!';
+                break;
+              default:
+                break;
+            }
+             
+        });
     });
     return divElem; 
 };
