@@ -1,15 +1,15 @@
 import { changeView } from "../view-controler/router.js";
 import { createUser, signGoogle, existingUser, app } from "./firebase.js";
 /* Crear una cuenta con email y password, donde usamos la libreria de Firebase */
-export const register = (email, password, name, lastName) => {
+export const register = (email, password) => {
     //Creamos un usuario con email y contraseña
     console.log(email, password);
     return createUser(email, password)
     //Si todo sale bien tendremos un resultado positivo
-    .then(() => {
+    .then(() => { 
       //redirecciona al muro
       window.location.hash = '#/wall';
-    })
+    });
     
 };
 /*Logueo con cuenta google*/

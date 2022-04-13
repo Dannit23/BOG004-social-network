@@ -1,19 +1,21 @@
 import { changeView } from '../view-controler/router.js';
-import { savePost, collection } from '../firebase/firebase.js';
+import { savePost } from '../firebase/firebase.js';
 
 export default () => {
     const viewWall = `
-    <div>
-    <img  id="logoSmall" class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
-    </div>
     <div id="signOff">
+    <img  id="logoSmall" class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <button id="sign-off" >
+    <img src="https://i.imgur.com/khsMnBi.png" alt="Sign off">
+    </button>
+    </div>
+    <div id="profile">
     <img  id="userlogo" class="userImage" src="https://i.imgur.com/2dpt47g.png" alt="userlogo">
-    /*falta agregar el nombre o el correo del usuario que se registra*/
-    <button class="botons" type="submit" id="sign-off">Cerrar Sesión</button><br>
+    <div id="userName">${window.currentUserEmail}</div>
     </div>
     <form id="text">
     <div id="post">
-    <textarea id="comentText" placeholder="¡Comenta!"></textarea>
+    <textarea id="comentText" rows="5" cols="40" placeholder="¡Comenta!"></textarea>
     <button class="botons" type="submit" id="postText">Publicar</button>
     </div>
     </form>
@@ -36,6 +38,8 @@ export default () => {
         e.preventDefault()
         const coment = text['comentText']
         savePost(coment.value);
+        //Resetea el espacio del post
+        text.reset();
     });
 
     return divElem; 

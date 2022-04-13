@@ -7,7 +7,8 @@
     signInWithEmailAndPassword,
     getFirestore,
     collection,
-    addDoc } from './firebaseImport.js';
+    addDoc,
+    onAuthStateChanged } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,14 +26,15 @@
 
   // Initialize Firebase
   export const app = initializeApp(firebaseConfig);
-   
+  const auth = getAuth()
   const db = getFirestore()
+  
 
   //Dentro de una funcion
   //Utilizamos los servicios de Firebase, tenemos todas las funciones para gestionar, crear, autenticar de nuestros usuarios
-  export const createUser = (email, password) => {
+  export const createUser = (email, password, name, lastName) => {
     const auth = getAuth();
-    return createUserWithEmailAndPassword(auth, email, password)
+    return createUserWithEmailAndPassword(auth, email, password, name, lastName)
   };
   
   export const signGoogle = () => {
@@ -49,7 +51,39 @@
 
   //Se exporta una funcion para guardar la información en firestore
   export const savePost = (comentText) => {
-    //para llamar la base de datos con su nombre
-    addDoc(collection(db, 'publications')
+    console.log(comentText)
+    //para llamar la base de datos con su nombre(data)
+    addDoc(collection(db, 'publications'), {comentText}) 
   };
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const userName = document.getElementById("userName")
+      userName.innerHTML = user.email
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    }
+  });
+  
+  
+ 
+
+
+
+
+  /* onAuthStateChanged(auth, (user) => {
+    if (user) { 
+      window.currentUserName = user.name;      
+      window.currentUserUid = user.uid;
+    }
+    else { 
+      window.currentUserName = "";
+      window.currentUserUid = "";
+    }
+  }); */
   
