@@ -1,5 +1,5 @@
 import { changeView } from '../view-controler/router.js';
-import { savePost } from '../firebase/firebase.js';
+import { savePost, profile, getComent, onSnapshot, collection, db } from '../firebase/firebase.js';
 
 export default () => {
     const viewWall = `
@@ -11,7 +11,7 @@ export default () => {
     </div>
     <div id="profile">
     <img  id="userlogo" class="userImage" src="https://i.imgur.com/2dpt47g.png" alt="userlogo">
-    <div id="userName">${window.currentUserEmail}</div>
+    <div id="userName"></div>
     </div>
     <form id="text">
     <div id="post">
@@ -42,14 +42,36 @@ export default () => {
         text.reset();
     });
 
+    profile(divElem); 
+    
     return divElem; 
 
-}
+};
+   
+   //se crea esta variable para mostrar los datos en una interfaz para que sea mas simple de ver
+   const comentContainer = document.getElementById('coment-container')
 
    //Se crea un evento para ejecutar cuando la aplicacion recargue con firestore
-   window. addEventListener('DOMContentLoaded', () => {
-    //console.log("works")
+window.addEventListener('DOMContentLoaded', async () => {
+     //console.log("works")
+    onSnapshot(collection(db, 'comentText'), (querySnapshot) => {
+
+        let paintPost = '';
+            
+        querySnapshot.forEach((doc) => {
+            const post = doc.data();
+
+            paintPost += `
+            <div class="postPublications">
+            <p>${post.comentText}</p>
+            </div>
+            `;
+        });
+        
+        comentContainer.innerHTML = paintPost;
+
     });
 
-
+}); 
+            
 

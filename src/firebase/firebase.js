@@ -8,7 +8,9 @@
     getFirestore,
     collection,
     addDoc,
-    onAuthStateChanged } from './firebaseImport.js';
+    onAuthStateChanged,
+    getDocs,
+    onSnapshot } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -32,9 +34,9 @@
 
   //Dentro de una funcion
   //Utilizamos los servicios de Firebase, tenemos todas las funciones para gestionar, crear, autenticar de nuestros usuarios
-  export const createUser = (email, password, name, lastName) => {
+  export const createUser = (email, password) => {
     const auth = getAuth();
-    return createUserWithEmailAndPassword(auth, email, password, name, lastName)
+    return createUserWithEmailAndPassword(auth, email, password)
   };
   
   export const signGoogle = () => {
@@ -56,19 +58,41 @@
     addDoc(collection(db, 'publications'), {comentText}) 
   };
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      const userName = document.getElementById("userName")
-      userName.innerHTML = user.email
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      const uid = user.uid;
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    }
-  });
+  export const getComent = () => getDocs(collection(db, 'publications')) 
+
+  //Evento de cuando se obtengan comentarios
+  export const onGetComents = () => console.log('onGetComents')
+
+  //Esta funcion es propia de firestore para recargar automaticamente los comentarios 
+  export { 
+    onSnapshot,
+    collection, 
+    db
+  };
+
+  /* //se exporta una funcion para guardar el nombre y el apellido del usuario como perfil del post
+  export const saveUserName = (name, lastName, uid) => {
+    return addDoc(collection(db, 'datosIdentificacionUsuario'), {name, lastName, uid})
+    // const name = divElem.querySelector('#name').value;
+    // const lastName = divElem.querySelector('#lastName').value; 
+  }; */
+
+  export const profile = (divElem) => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const userName = divElem.querySelector("#userName")
+        userName.innerHTML = user.email
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+
+  }
   
   
  
@@ -76,14 +100,4 @@
 
 
 
-  /* onAuthStateChanged(auth, (user) => {
-    if (user) { 
-      window.currentUserName = user.name;      
-      window.currentUserUid = user.uid;
-    }
-    else { 
-      window.currentUserName = "";
-      window.currentUserUid = "";
-    }
-  }); */
   

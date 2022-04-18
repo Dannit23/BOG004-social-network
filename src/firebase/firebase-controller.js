@@ -9,6 +9,8 @@ export const register = (email, password) => {
     .then(() => { 
       //redirecciona al muro
       window.location.hash = '#/wall';
+      /* console.log(response)
+      saveUserName(name, lastname, response.user.uid) */
     });
     
 };
