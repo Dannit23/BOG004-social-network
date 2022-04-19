@@ -1,5 +1,6 @@
 import { changeView } from '../view-controler/router.js';
-import { savePost, profile, getComent, onSnapshot, collection, db } from '../firebase/firebase.js';
+import { savePost, profile, getComents, onSnapshot, collection, db, deleteComent } from '../firebase/firebase.js';
+import { onAuthStateChanged, getAuth } from '../firebase/firebaseImport.js';
 
 export default () => {
     const viewWall = `
@@ -51,25 +52,50 @@ export default () => {
    //se crea esta variable para mostrar los datos en una interfaz para que sea mas simple de ver
    const comentContainer = document.getElementById('coment-container')
 
+   const subscribe = async () => {
+    //console.log("works")
+   // publications es el nombre de nuestra colección
+   onSnapshot(collection(db, 'publications'), (querySnapshot) => {
+       let paintPost = '';
+       console.log(window.user)
+       if (window.user == undefined) {
+           return
+       }
+       querySnapshot.forEach((doc) => {
+           const post = doc.data();
+           /* console.log(doc.id); */
+           paintPost += `
+           <div class="postPublications">
+           <p>${post.author}</p>
+           <p>${post.comentText}</p>
+           <button class="btn-delete" data-id="${doc.id}">Eliminar</button>
+           <button class="btn-edit" data-id="${doc.id}">Editar</button>
+           </div>
+           `;
+       });
+       
+       //Se añade propiedad de HTM data-id, para guardar datos dentro del botón, con un 
+       //valor del id de cada comentario
+       comentContainer.innerHTML = paintPost;
+
+       //Creamos una lista de botones de eliminar
+       const btnsDelete = comentContainer.querySelectorAll('.btn-delete')
+       btnsDelete.forEach(btn => {
+           btn.addEventListener('click', ({target: { dataset }}) => {
+               deleteComent(dataset.id)
+           })
+       })
+
+       //Creamos una lista de botones de editar
+       const btnsEdit = comentContainer.querySelectorAll('.btn-edit')
+       btnsEdit.forEach(btn => {
+           console.log(btn)
+       })
+   });
+
+}
    //Se crea un evento para ejecutar cuando la aplicacion recargue con firestore
-window.addEventListener('DOMContentLoaded', async () => {
-     //console.log("works")
-    // publications es el nombre de nuestra colección
-    onSnapshot(collection(db, 'publications'), (querySnapshot) => {
-        let paintPost = '';
-        querySnapshot.forEach((doc) => {
-            const post = doc.data();
-            paintPost += `
-            <div class="postPublications">
-            <p>${post.comentText}</p>
-            </div>
-            `;
-        });
-        
-        comentContainer.innerHTML = paintPost;
+window.addEventListener('DOMContentLoaded', subscribe); 
+onAuthStateChanged(getAuth(), subscribe);
 
-    });
-
-}); 
-            
 

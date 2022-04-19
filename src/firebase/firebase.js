@@ -10,6 +10,8 @@
     addDoc,
     onAuthStateChanged,
     getDocs,
+    deleteDoc,
+    doc,
     onSnapshot } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -55,20 +57,25 @@
   export const savePost = (comentText) => {
     console.log(comentText)
     //para llamar la base de datos con su nombre(data)
-    addDoc(collection(db, 'publications'), {comentText}) 
+    addDoc(collection(db, 'publications'), {"comentText": comentText, 
+    "author": window.user.email}) 
   };
 
-  export const getComent = () => getDocs(collection(db, 'publications')) 
+  export const getComents = () => getDocs(collection(db, 'publications')) 
 
   //Evento de cuando se obtengan comentarios
   export const onGetComents = () => console.log('onGetComents')
 
   //Esta funcion es propia de firestore para recargar automaticamente los comentarios 
-  export { 
+  export {
     onSnapshot,
-    collection, 
+    collection,
     db
-  };
+  }
+
+  export const deleteComent = (id) => deleteDoc(doc(db, 'publications', id));
+
+
 
   /* //se exporta una funcion para guardar el nombre y el apellido del usuario como perfil del post
   export const saveUserName = (name, lastName, uid) => {
@@ -85,7 +92,7 @@
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
-        // ...
+        window.user = user;
       } else {
         // User is signed out
         // ...
@@ -93,6 +100,8 @@
     });
 
   }
+
+ 
   
   
  
