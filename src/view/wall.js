@@ -54,13 +54,11 @@ export default () => {
    //Se crea un evento para ejecutar cuando la aplicacion recargue con firestore
 window.addEventListener('DOMContentLoaded', async () => {
      //console.log("works")
-    onSnapshot(collection(db, 'comentText'), (querySnapshot) => {
-
+    // publications es el nombre de nuestra colección
+    onSnapshot(collection(db, 'publications'), (querySnapshot) => {
         let paintPost = '';
-            
         querySnapshot.forEach((doc) => {
             const post = doc.data();
-
             paintPost += `
             <div class="postPublications">
             <p>${post.comentText}</p>
