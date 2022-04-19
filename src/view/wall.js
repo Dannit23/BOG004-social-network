@@ -54,6 +54,7 @@ export default () => {
    //Se crea un evento para ejecutar cuando la aplicacion recargue con firestore
 window.addEventListener('DOMContentLoaded', async () => {
      //console.log("works")
+     //onSnapshot es una consulta de Firestore
     onSnapshot(collection(db, 'comentText'), (querySnapshot) => {
 
         let paintPost = '';
