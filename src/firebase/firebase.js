@@ -12,7 +12,9 @@
     getDocs,
     deleteDoc,
     doc,
-    onSnapshot } from './firebaseImport.js';
+    onSnapshot,
+    getDoc,
+    updateDoc } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,7 +32,7 @@
 
   // Initialize Firebase
   export const app = initializeApp(firebaseConfig);
-  const auth = getAuth()
+  export const auth = getAuth();
   const db = getFirestore()
   
 
@@ -57,8 +59,11 @@
   export const savePost = (comentText) => {
     console.log(comentText)
     //para llamar la base de datos con su nombre(data)
-    addDoc(collection(db, 'publications'), {"comentText": comentText, 
-    "author": window.user.email}) 
+    addDoc(collection(db, 'publications'), {
+      "comentText": comentText, 
+      "likes": [],
+      "likesCounter": 0,
+      "author": window.user.email}) 
   };
 
   export const getComents = () => getDocs(collection(db, 'publications')) 
@@ -75,7 +80,31 @@
 
   export const deleteComent = (id) => deleteDoc(doc(db, 'publications', id));
 
+  //Se crea función para obtener un único comentario
+  export const getComent = (id) => getDoc(doc(db, 'publications', id));
 
+  //Se crea función para poder actualizar los comentarios
+  //newFields = Hace referencia a actualizar nuestra base de datos en Firestore
+  export const updateComent = (id, newFields) => updateDoc(doc(db, 'publications', id), newFields)
+
+  export const updateLikeBtn = async (id, like) => {
+    const getPost = await getComent(id);
+    const uLike = getPost.data().likes;
+    const likesCount = getPost.data().likesCounter;
+
+    if(uLike.includes(like)) {
+      await updateComent(id, {
+        likes: arrayRemove(like),
+        likesCounter: likesCount - 1,
+      });
+    } else {
+      await updateComent(id, {
+        likes: arrayUnion(like),
+        likesCounter: likesCount + 1,
+      });
+    }
+
+  }
 
   /* //se exporta una funcion para guardar el nombre y el apellido del usuario como perfil del post
   export const saveUserName = (name, lastName, uid) => {
