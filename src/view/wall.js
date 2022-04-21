@@ -76,3 +76,4 @@ window.addEventListener('DOMContentLoaded', async () => {
 }); 
             
 
+console.log('Hola!')
