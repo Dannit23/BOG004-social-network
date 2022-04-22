@@ -90,6 +90,7 @@ export default () => {
        }
        querySnapshot.forEach((doc) => {
            const post = doc.data();
+           console.log(post.likes)
            console.log('post: ', post); 
            paintPost += `
            <div class="postPublications">
@@ -111,7 +112,9 @@ export default () => {
        const btnsDelete = comentContainer.querySelectorAll('.btn-delete')
        btnsDelete.forEach(btn => {
            btn.addEventListener('click', ({target: { dataset }}) => {
-               deleteComent(dataset.id)
+            if (window.confirm('¿Estás segur@ de borrar este post?')) {   
+            deleteComent(dataset.id);
+            }
            })
        })
 
@@ -134,7 +137,7 @@ export default () => {
        like.forEach((btn) => {
            btn.addEventListener('click', (e) => {
                const userId = auth.currentUser.uid;
-               updateLikeBtn(e.target.value, userId);
+               updateLikeBtn(e.target.dataset.id, userId);
            });
        });
 

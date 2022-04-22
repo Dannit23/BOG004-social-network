@@ -9,9 +9,9 @@ export default () => {
     <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <p id="textRegister">Registrate</p>
     <p class="text">Nombre</p>
-    <input class="text" type="text" id="name" placeholder="Ingresa tu nombre">
+    <input class="textP" type="text" id="name" placeholder="Ingresa tu nombre">
     <p class="text">Apellido</p>
-    <input class="text" type="text" id="lastName" placeholder="Ingresa tu apellido">
+    <input class="textP" type="text" id="lastName" placeholder="Ingresa tu apellido">
     <p class="text">Correo electrónico</p>
     <input class="email" id="email" type="email" placeholder="Ingresa tu correo">
     <div id="notification"> </div>

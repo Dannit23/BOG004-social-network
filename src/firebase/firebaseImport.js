@@ -1,6 +1,6 @@
 //Aquí colocamos las importaciones de la página oficial de Firebase 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDocs, onSnapshot, deleteDoc, doc, getDoc, updateDoc, arrayRemove, arrayUnion } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
 
 import {
@@ -29,5 +29,7 @@ export {
     deleteDoc,
     doc,
     getDoc,
-    updateDoc
+    updateDoc,
+    arrayRemove,
+    arrayUnion
 } 

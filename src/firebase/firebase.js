@@ -14,7 +14,9 @@
     doc,
     onSnapshot,
     getDoc,
-    updateDoc } from './firebaseImport.js';
+    updateDoc,
+    arrayRemove,
+    arrayUnion } from './firebaseImport.js';
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -94,13 +96,13 @@
 
     if(uLike.includes(like)) {
       await updateComent(id, {
-        likes: arrayRemove(like),
-        likesCounter: likesCount - 1,
+        "likes": arrayRemove(like),
+        "likesCounter": likesCount - 1,
       });
     } else {
       await updateComent(id, {
-        likes: arrayUnion(like),
-        likesCounter: likesCount + 1,
+        "likes": arrayUnion(like),
+        "likesCounter": likesCount + 1,
       });
     }
 

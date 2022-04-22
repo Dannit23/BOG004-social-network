@@ -1,5 +1,5 @@
 body {
- background-color: #fdf9da;
+ background-color: white;
 }
 
 .botonsHome li{
@@ -17,18 +17,18 @@ body {
 
 .text-welcome {
  text-align: center;
- font-size: 15px;
+ font-size: 18px;
  font-family: Arial;
 }
 
 #btn-google {
  width: 65%;
  margin-top: 20px;
- padding: 10px 20px 10px 20px;
+ padding: 8px 0px 8px 0px;
  font-family: Arial;
- font-size: 16px;
+ font-size: 19px;
  font-weight: bold;
- background-color: #f3c468;
+ background-color: #ffb977;
  border: none;
  border-radius: 10px;
  box-shadow: 2px 8px 8px rgb(117, 115, 115);
@@ -42,9 +42,12 @@ body {
 .text {
  margin-top: 30px;
  font-family: Arial;
- font-size: 17px;
+ font-size: 20px;
  text-align: center;
+ font-weight: bold;
 }
+
+
 
 .email {
  margin-top: 10px;
@@ -54,6 +57,8 @@ body {
  display: flex;
  margin: auto;
  text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
 }
 
 .password {
@@ -64,15 +69,17 @@ body {
  display: flex;
  margin: auto;
  text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
 }
 
 .botons {
  margin-top: 20px;
  padding: 10px 20px 10px 20px;
  font-family: Arial;
- font-size: 16px;
+ font-size: 18px;
  font-weight: bold;
- background-color: #f3c468;
+ background-color: #ffb977;
  border: none;
  border-radius: 10px;
  box-shadow: 2px 8px 8px rgb(117, 115, 115);
@@ -89,14 +96,14 @@ body {
  margin-top: 45px; 
  text-align: center;
  font-family: Arial;
- background-color: #ffdcae;
+ background-color: #ffb977;
 }
 
 /*formulario de registro*/
 #textRegister {
  margin-top: 20px;  
  font-family: Arial;
- font-size: 20px;
+ font-size: 25px;
  font-weight: bold;
  text-align: center;
 }
@@ -109,6 +116,8 @@ body {
  display: flex;
  margin: auto;
  text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
 }
 
 #lastName {
@@ -119,6 +128,8 @@ body {
  display: flex;
  margin: auto;
  text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
 }
 
 /* Vista muro */
@@ -128,7 +139,11 @@ body {
 
 #sign-off{
  border: none;
- background-color:  #fdf9da;
+ background-color:  #ffb977;
+ border-radius: 50%;
+ display: block;
+ width: 50px;
+ height: 50px;
 }
 
 #logoSmall{
