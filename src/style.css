@@ -1,24 +1,43 @@
 body {
- background-color: white;
+  background-image: url("https://i.imgur.com/EcK1kXZ.png");
+  margin: 0;
 }
 
-.botonsHome li{
+#home {
+  width: 70%;
+  height: 80vh;
+  background-color: #ffffff95;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 20px;
+}
+
+.botonsHome li {
  list-style: none;
 }
 
 .headerImage {
- width: 85%;
- height: 15%;
+ width: 65%;
  display: flex;
  align-content: center;
  justify-content: center;
- margin: 20px auto;
+ margin: auto;
+ border-radius: 20px;
 }
 
+.headerImage2 {
+  width: 65%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+ 
 .text-welcome {
  text-align: center;
  font-size: 18px;
  font-family: Arial;
+ color: #404040;
 }
 
 #btn-google {
@@ -46,8 +65,6 @@ body {
  text-align: center;
  font-weight: bold;
 }
-
-
 
 .email {
  margin-top: 10px;
@@ -89,7 +106,8 @@ body {
 }
 
 #create-account {
- margin-top: 40px;
+ margin-top: 30px;
+ margin-bottom: 40px;
 }
 
 #footer {
@@ -97,9 +115,30 @@ body {
  text-align: center;
  font-family: Arial;
  background-color: #ffb977;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 40px;
 }
 
 /*formulario de registro*/
+#register {
+  width: 70%;
+  height: 58vh;
+  background-color: #ffffff95;
+  margin: auto;
+  margin-top: 25%;
+  border-radius: 20px;
+}
+
+.headerImage3 {
+  width: 85%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+ 
 #textRegister {
  margin-top: 20px;  
  font-family: Arial;
@@ -133,6 +172,15 @@ body {
 }
 
 /* Vista muro */
+#wall {
+  width: 70%;
+  height: 30vh;
+  background-color: #ffffff95;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 20px;
+}
+
 #signOff{
  display: flex;
 }
@@ -144,10 +192,15 @@ body {
  display: block;
  width: 50px;
  height: 50px;
+ box-shadow: 2px 8px 8px rgb(117 115 115);
 }
 
 #logoSmall{
- width: 67%;
+  width: 75%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px auto;
 }
 
 #profile{
@@ -165,13 +218,17 @@ body {
 
 #userName{
  font-family: Arial;
- font-size: 15px;
+ font-size: 17px;
+ font-weight: bold;
 }
 
 
 #comentText{
   margin-top: 5%;
-  margin-left: 16%;
+  margin-left: 12%;
+  border: 1px solid black;
+  font-family: arial;
+  font-size: 16px;
 }
 
 #text{
@@ -183,6 +240,34 @@ body {
  padding: 6px 12px 6px 12px;
 }
 .postPublications{
-  border: solid 1px grey;
+  width: 70%;
+  margin: auto;
   margin-top: 5%;
+  background-color: #ffffff95;
+  border-radius: 20px;
+  /* text-align: center; */
+  font-family: Arial;
+  padding: 3px;
+}
+
+.author {
+  text-align: center;
+}
+.postUser {
+  width: 60%;
+  border: solid 1px black;
+  margin: auto;
+}
+
+#btnsPost {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 30px;
+  margin-top: 10px;
+  padding: 7px;
+}
+
+#counter {
+  align-self: center;
 }

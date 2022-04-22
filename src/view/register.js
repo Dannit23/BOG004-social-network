@@ -2,11 +2,9 @@ import  { register }  from '../firebase/firebase-controller.js'
 
 export default () => {
     const viewRegister = `
-    <div>
-    <a href="#/register"><button class="botonsHome">registro</button></a>
-    </div>
+    <div id="register">
     <form id="registerUser">
-    <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <img class="headerImage3" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <p id="textRegister">Registrate</p>
     <p class="text">Nombre</p>
     <input class="textP" type="text" id="name" placeholder="Ingresa tu nombre">
@@ -19,6 +17,7 @@ export default () => {
     <input class="password" type="password" id="password" placeholder="Ingresa tu contraseña">
     <button class="botons" type="submit" id="create-account">CREAR CUENTA</button>
     </form>
+    </div>
     `;
     const divElem = document.createElement('div');
     divElem.innerHTML = viewRegister;

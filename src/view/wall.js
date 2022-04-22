@@ -15,8 +15,9 @@ import { onAuthStateChanged, getAuth } from '../firebase/firebaseImport.js';
 
 export default () => {
     const viewWall = `
+    <div id="wall">
     <div id="signOff">
-    <img  id="logoSmall" class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <img  id="logoSmall" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <button id="sign-off" >
     <img src="https://i.imgur.com/khsMnBi.png" alt="Sign off">
     </button>
@@ -31,6 +32,7 @@ export default () => {
     <button class="botons" type="submit" id="postText">Publicar</button>
     </div>
     </form>
+    </div>
     `;
     const divElem = document.createElement('div');
     divElem.innerHTML = viewWall;
@@ -74,6 +76,7 @@ export default () => {
    //se crea esta variable para mostrar los datos en una interfaz para que sea mas simple de ver
    const comentContainer = document.getElementById('coment-container')
 
+
    //Se crea una variable para actualizar los datos
    let editStatus = false;
    let id = '';
@@ -94,12 +97,16 @@ export default () => {
            console.log('post: ', post); 
            paintPost += `
            <div class="postPublications">
-           <p>${post.author}</p>
+           <p class="author">${post.author}</p>
+           <div class="postUser">
            <p>${post.comentText}</p>
-           <p>${post.likes.length}</p>
+           </div>
+           <div id="btnsPost">
            <button class="btn-delete" data-id="${doc.id}">Eliminar</button>
            <button class="btn-edit" data-id="${doc.id}">Editar</button>
            <button class="btn-like" data-id="${doc.id}">Me gusta</button>
+           <p id="counter">${post.likes.length}</p>
+           </div>
            </div>
            `;
        });

@@ -2,12 +2,11 @@ import { gmail, signIn } from '../firebase/firebase-controller.js';
 import { changeView } from '../view-controler/router.js';
 export default () => {
     const viewHome = `
-    <div>
-    <a href="#/"><button class="botonsHome">Travesias Colombia</button></a>
-    </div>
+    <div id="home">
+    
     <form id="registerGoogle">
-    <img class="headerImage" src="https://i.imgur.com/p8blMIY.jpg" alt="collage">
-    <img class="headerImage" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <img class="headerImage" src="https://i.imgur.com/7qQ9PFZ.jpg" alt="collage">
+    <img class="headerImage2" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <h2 class="text-welcome">Se un viajero, te ayudamos a  descubrir lugares y llenar tu vida de aventuras.</h2>
     <button type="submit" id="btn-google"><img class="logoGoogle" src="https://i.imgur.com/bD3SqPX.png">continuar con Google</button>
     <div id="notificationG"> </div>
@@ -23,6 +22,7 @@ export default () => {
     <form id="createAccount">
     <button class="botons" type="submit" id="create-account">CREAR CUENTA</button>
     </form>
+    </div>
     `;
     const divElem = document.createElement('div');
     divElem.classList.add('position');
