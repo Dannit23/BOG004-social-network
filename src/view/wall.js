@@ -19,7 +19,7 @@ export default () => {
     <div id="signOff">
     <img  id="logoSmall" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <button id="sign-off" >
-    <img src="https://i.imgur.com/khsMnBi.png" alt="Sign off">
+    <img id="logoExit" src="https://i.imgur.com/khsMnBi.png" alt="Sign off">
     </button>
     </div>
     <div id="profile">
