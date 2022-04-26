@@ -17,7 +17,7 @@ export default () => {
     const viewWall = `
     <div id="wall">
     <div id="signOff">
-    <img  id="logoSmall" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
+    <img id="logoSmall" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">
     <button id="sign-off" >
     <img id="logoExit" src="https://i.imgur.com/khsMnBi.png" alt="Sign off">
     </button>
@@ -102,9 +102,9 @@ export default () => {
            <p>${post.comentText}</p>
            </div>
            <div id="btnsPost">
-           <button class="btn-delete" data-id="${doc.id}">Eliminar</button>
-           <button class="btn-edit" data-id="${doc.id}">Editar</button>
-           <button class="btn-like" data-id="${doc.id}">Me gusta</button>
+           <button class="btn-delete" data-id="${doc.id}"><img class="btn-delete" src="https://i.imgur.com/vXa1YKk.png" data-id="${doc.id}"></button>
+           <button class="btn-edit" data-id="${doc.id}"><img class="btn-edit" src="https://i.imgur.com/n7lf8Ug.png" data-id="${doc.id}"></button>
+           <button class="btn-like" data-id="${doc.id}"><img class="btn-like" src="https://i.imgur.com/TwOM0Gu.png" data-id="${doc.id}"></button>
            <p id="counter">${post.likes.length}</p>
            </div>
            </div>
@@ -136,7 +136,7 @@ export default () => {
 
             editStatus = true;
             id = doc.id;
-            text['postText'].innerText = 'Update'
+            text['postText'].innerText = 'Publicar'
            })
        })
 

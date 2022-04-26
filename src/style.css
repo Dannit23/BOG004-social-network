@@ -1,15 +1,12 @@
-/* @media only screen and (max-width: 600px) { */
-
 body {
  background-image: url("https://i.imgur.com/EcK1kXZ.png");
  margin: 0;
- /* width: 100%;
- height: 100%; */
+ /* background: ; */
 }
 
 #home {
   width: 70%;
-  height: 89vh;
+  height: 87vh;
   background-color: #ffffff95;
   margin: auto;
   margin-top: 7%;
@@ -21,7 +18,7 @@ body {
 }
 
 .headerImage {
- width: 65%;
+ width: 57%;
  display: flex;
  align-content: center;
  justify-content: center;
@@ -31,16 +28,16 @@ body {
 }
 
 .headerImage2 {
-  width: 65%;
+  width: 70%;
   display: flex;
   align-content: center;
   justify-content: center;
-  margin: 20px auto;
+  margin: 8px auto;
 }
  
 .text-welcome {
  text-align: center;
- font-size: 18px;
+ font-size: 13px;
  font-family: Arial;
  color: #404040;
  padding: 0px 10px 0px 10px;
@@ -51,7 +48,7 @@ body {
  margin-top: 20px;
  padding: 8px 0px 8px 0px;
  font-family: Arial;
- font-size: 19px;
+ font-size: 12px;
  font-weight: bold;
  background-color: #ffb977;
  border: none;
@@ -64,10 +61,14 @@ body {
  margin-right: auto;
 }
 
+.logoGoogle {
+  width: 14%;
+}
+
 .text {
- margin-top: 30px;
+ margin-top: 22px;
  font-family: Arial;
- font-size: 20px;
+ font-size: 13px;
  text-align: center;
  font-weight: bold;
 }
@@ -75,7 +76,7 @@ body {
 .email {
  margin-top: 10px;
  font-family: Arial;
- font-size: 17px;
+ font-size: 13px;
  border: 1px solid black;
  display: flex;
  margin: auto;
@@ -87,7 +88,7 @@ body {
 .password {
  margin-top: 10px;
  font-family: Arial;
- font-size: 17px;
+ font-size: 13px;
  border: 1px solid black;
  display: flex;
  margin: auto;
@@ -97,10 +98,10 @@ body {
 }
 
 .botons {
- margin-top: 20px;
- padding: 10px 20px 10px 20px;
+ margin-top: 6px;
+ padding: 7px 17px 7px 17px;
  font-family: Arial;
- font-size: 18px;
+ font-size: 12px;
  font-weight: bold;
  background-color: #ffb977;
  border: none;
@@ -111,28 +112,23 @@ body {
  margin-right: auto;
 }
 
-#create-account {
- margin-top: 30px;
- margin-bottom: 40px;
-}
-
 #footer {
  margin-top: 45px; 
  text-align: center;
  font-family: Arial;
- font-size: 16px;
+ font-size: 11px;
  background-color: #ffb977;
  position: fixed;
  bottom: 0;
  width: 100%;
- height: 28px;
+ height: 21px;
  padding: 10px 0px 0px 0px;
 }
 
 /*formulario de registro*/
 #register {
   width: 70%;
-  height: 66vh;
+  height: 71vh;
   background-color: #ffffff95;
   margin: auto;
   margin-top: 54px;
@@ -149,9 +145,9 @@ body {
 }
  
 #textRegister {
- margin-top: 20px;  
+ margin-top: -5px;  
  font-family: Arial;
- font-size: 25px;
+ font-size: 18px;
  font-weight: bold;
  text-align: center;
 }
@@ -159,7 +155,7 @@ body {
 #name {
  margin-top: 10px;
  font-family: Arial;
- font-size: 17px;
+ font-size: 13px;
  border: 1px solid black;
  display: flex;
  margin: auto;
@@ -171,7 +167,7 @@ body {
 #lastName {
  margin-top: 10px;
  font-family: Arial;
- font-size: 17px;
+ font-size: 13px;
  border: 1px solid black;
  display: flex;
  margin: auto;
@@ -180,10 +176,26 @@ body {
  border-radius: 8px;
 }
 
+.botons-r {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding: 7px 17px 7px 17px;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ffb977;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 8px 8px rgb(117 115 115);
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Vista muro */
 #wall {
   width: 70%;
-  height: 30vh;
+  height: 34vh;
   background-color: #ffffff95;
   margin: auto;
   margin-top: 7%;
@@ -199,11 +211,16 @@ body {
  background-color:  #ffb977;
  border-radius: 50%;
  display: block;
- width: 50px;
- height: 50px;
- padding: 3px 6px 1px 6px;
+ width: 30px;
+ height: 30px;
+ padding: 1px 5px 0px 5px;
  margin-top: 10px;
+ margin-right: 10px;
  box-shadow: 2px 8px 8px rgb(117 115 115);
+}
+
+#logoExit {
+  width: 21px;
 }
 
 #logoSmall{
@@ -229,19 +246,19 @@ body {
 
 #userName{
  font-family: Arial;
- font-size: 17px;
+ font-size: 13px;
  font-weight: bold;
 }
 
 
 #comentText{
-  width: 338px;
+  width: 190px;
   padding: 6px 10px 6px 10px;
   margin-top: 5%;
   margin-left: 9%;
   border: 1px solid black;
   font-family: arial;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 #text{
@@ -249,7 +266,7 @@ body {
 }
 
 #postText{
- font-size: 14px;
+ font-size: 12px;
  padding: 6px 12px 6px 12px;
  margin-top: 6px;
 }
@@ -264,13 +281,18 @@ body {
   padding: 3px;
 }
 
+.postPublications:last-child{
+  margin-bottom: 70px;
+}
+
 .author {
   text-align: center;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
 }
 .postUser {
-  width: 338px;
+  width: 190px;
+  font-size: 12px;
   border: solid 1px black;
   margin: auto;
   word-wrap: break-word;
@@ -286,310 +308,239 @@ body {
   padding: 7px;
 }
 
+.btn-delete {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-edit {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-like {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
 #counter {
   align-self: center;
 }
-/* } */
 
-@media only screen and (max-width: 1200px) {
 
-  body {
-   background-image: url("https://i.imgur.com/EcK1kXZ.png");
-   margin: 0;
-   width: 100%;
-   height: 100%;
-  }
-  
-  #home {
-    width: 41%;
-    height: 92vh;
-    background-color: #ffffff95;
-    margin: auto;
-    margin-top: 2%;
-    border-radius: 20px;
-  }
-  
-  .botonsHome li {
-   list-style: none;
-  }
-  
+@media only screen and (min-width: 768px) {
+
   .headerImage {
-   width: 65%;
-   display: flex;
-   align-content: center;
-   justify-content: center;
-   margin: auto;
-   border-radius: 20px;
-   padding: 11px;
+    width: 50%;
   }
-  
-  .headerImage2 {
-    width: 65%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: 20px auto;
-  }
-   
+
   .text-welcome {
-   text-align: center;
-   font-size: 18px;
-   font-family: Arial;
-   color: #404040;
-   padding: 0px 11px 0px 11px;
+    font-size: 16px;
+    margin-top: 18px;
   }
-  
+
   #btn-google {
-   width: 65%;
-   margin-top: 20px;
-   padding: 8px 0px 8px 0px;
-   font-family: Arial;
-   font-size: 19px;
-   font-weight: bold;
-   background-color: #ffb977;
-   border: none;
-   border-radius: 10px;
-   box-shadow: 2px 8px 8px rgb(117, 115, 115);
-   display: flex;
-   align-items: center;
-   justify-content: space-evenly;
-   margin-left: auto;
-   margin-right: auto;
+    width: 42%;
+    font-size: 15px;
   }
-  
+
   .text {
-   margin-top: 30px;
-   font-family: Arial;
-   font-size: 20px;
-   text-align: center;
-   font-weight: bold;
+    font-size: 15px;
   }
-  
+
   .email {
-   margin-top: 10px;
-   font-family: Arial;
-   font-size: 17px;
-   border: 1px solid black;
-   display: flex;
-   margin: auto;
-   text-align: center;
-   padding: 8px 14px 8px 14px;
-   border-radius: 8px;
+    font-size: 15px;
   }
-  
+
   .password {
-   margin-top: 10px;
-   font-family: Arial;
-   font-size: 17px;
-   border: 1px solid black;
-   display: flex;
-   margin: auto;
-   text-align: center;
-   padding: 8px 14px 8px 14px;
-   border-radius: 8px;
+    font-size: 15px;
   }
-  
+
   .botons {
-   margin-top: 20px;
-   padding: 10px 20px 10px 20px;
-   font-family: Arial;
-   font-size: 18px;
-   font-weight: bold;
-   background-color: #ffb977;
-   border: none;
-   border-radius: 10px;
-   box-shadow: 2px 8px 8px rgb(117, 115, 115);
-   display: flex;
-   margin-left: auto;
-   margin-right: auto;
+    font-size: 15px;
+    padding: 8px 18px 8px 18px;
   }
-  
-  #create-account {
-   margin-top: 20px;
-   margin-bottom: 40px;
-  }
-  
+
   #footer {
-   margin-top: 45px; 
-   text-align: center;
-   font-family: Arial;
-   font-size: 16px;
-   background-color: #ffb977;
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   height: 28px;
-   padding: 10px 0px 0px 0px;
+    font-size: 15px;
   }
-  
-  /*formulario de registro*/
+
+  /* Vista Register */
+
   #register {
-    width: 70%;
-    height: 68vh;
-    background-color: #ffffff95;
-    margin: auto;
-    margin-top: 134px;
-    border-radius: 20px;
+    height: 63vh;
+    margin-top: 135px;
   }
-  
+
   .headerImage3 {
-    width: 85%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: auto;
-    padding: 20px;
+    width: 80%;
   }
-   
+
   #textRegister {
-   margin-top: 20px;  
-   font-family: Arial;
-   font-size: 25px;
-   font-weight: bold;
-   text-align: center;
+    font-size: 24px;
   }
-  
+
   #name {
-   margin-top: 10px;
-   font-family: Arial;
-   font-size: 17px;
-   border: 1px solid black;
-   display: flex;
-   margin: auto;
-   text-align: center;
-   padding: 8px 14px 8px 14px;
-   border-radius: 8px;
+    font-size: 15px;
   }
-  
+
   #lastName {
-   margin-top: 10px;
-   font-family: Arial;
-   font-size: 17px;
-   border: 1px solid black;
-   display: flex;
-   margin: auto;
-   text-align: center;
-   padding: 8px 14px 8px 14px;
-   border-radius: 8px;
+    font-size: 15px;
   }
-  
-  /* Vista muro */
+
+  .botons-r {
+    margin-top: 22px;
+    padding: 8px 18px 8px 18px;
+    font-size: 15px;
+  }
+
+  /* Vista Muro */
+
   #wall {
-    width: 70%;
-    height: 41vh;
-    background-color: #ffffff95;
-    margin: auto;
-    margin-top: 7%;
-    border-radius: 20px;
-  }
-  
-  #signOff{
-   display: flex;
-  }
-  
-  #sign-off{
-   border: none;
-   background-color:  #ffb977;
-   border-radius: 50%;
-   display: block;
-   width: 60px;
-   height: 60px;
-   padding: 3px 6px 1px 6px;
-   margin-top: 21px;
-   box-shadow: 2px 8px 8px rgb(117 115 115);
+    height: 38vh;
   }
 
-  #logoExit{
-    width: 40px;
+  #logoSmall {
+    margin-top: 15px;
   }
-  
-  #logoSmall{
-    width: 75%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 16px;
-    margin-left: 64px;
-    margin-right: 75px;
+
+  #sign-off {
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-right: 20px;
   }
-  
-  #profile{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: 3%;
+
+  #logoExit {
+    width: 32px;
   }
-  
-  #userlogo{
-   width: 8%;
-   height: 8%;
-   margin-right: 2%;
+
+  #userName {
+    font-size: 18px;
   }
-  
-  #userName{
-   font-family: Arial;
-   font-size: 20px;
-   font-weight: bold;
-  }
-  
-  
-  #comentText{
-    width: 380px;
-    padding: 6px 10px 6px 10px;
+
+  #profile {
     margin-top: 3%;
-    margin-left: 27%;
-    border: 1px solid black;
-    font-family: arial;
-    font-size: 20px;
-  }
-  
-  #text{
-   justify-content: center;
-  }
-  
-  #postText{
-   font-size: 22px;
-   padding: 6px 12px 6px 12px;
-   margin-top: 18px;
   }
 
-  .postPublications{
-    width: 70%;
-    margin: auto;
-    margin-top: 5%;
-    background-color: #ffffff95;
-    border-radius: 20px;
-    /* text-align: center; */
-    font-family: Arial;
-    padding: 3px;
+  #comentText {
+    width: 300px;
+    margin-top: 4%;
+    margin-left: 20%;
+    font-size: 16px;
   }
-  
+
+  #postText {
+    font-size: 18px;
+    padding: 7px 13px 7px 13px;
+    margin-top: 10px;
+  }
+
   .author {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
   }
 
   .postUser {
-    width: 380px;
-    border: solid 1px black;
-    margin: auto;
-    word-wrap: break-word;
-    padding: 0px 10px 0px 10px;
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .btn-delete {
+    width: 26px;
+  }
+
+  .btn-edit {
+    width: 26px;
+  }
+
+  .btn-like {
+    width: 26px;
+  }
+
+  #counter {
     font-size: 18px;
   }
-  
-  #btnsPost {
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  /* #home {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: 30px;
-    margin-top: 10px;
-    padding: 7px;
+    grid-template-columns: repeat(1fr, 1fr);
+  } */
+
+  /* .headerImage {
+    width: 50%;
+  }
+
+  .text-welcome {
+    font-size: 16px;
+    margin-top: 18px;
+  } */
+/* 
+  #btn-google {
+    width: 42%;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+ .text {
+    font-size: 15px;
+  }
+
+  .email {
+    font-size: 20px;
+  }
+
+  .password {
+    font-size: 20px;
+  }
+
+  .botons {
+    font-size: 15px;
+    padding: 8px 18px 8px 18px;
+  }
+
+  #footer {
+    font-size: 14px;
+  }  */
+ 
+  /* Vista Register */
+
+  #register {
+    height: 73vh;
+    margin-top: 112px;
+  }
+
+  .headerImage3 {
+    width: 75%;
+  }
+
+  #textRegister {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  #name {
+    font-size: 20px;
+  }
+
+  #lastName {
+    font-size: 20px;
+  }
+
+  .botons-r {
+    margin-top: 30px;
+    padding: 9px 19px 9px 19px;
+    font-size: 20px;
   }
   
-  #counter {
-    align-self: center;
-  }
-  }
+}

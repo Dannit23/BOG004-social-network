@@ -3,7 +3,6 @@ import { changeView } from '../view-controler/router.js';
 export default () => {
     const viewHome = `
     <div id="home">
-    
     <form id="registerGoogle">
     <img class="headerImage" src="https://i.imgur.com/7qQ9PFZ.jpg" alt="collage">
     <img class="headerImage2" src="https://i.imgur.com/Ij0bvTJ.png" alt="logo">

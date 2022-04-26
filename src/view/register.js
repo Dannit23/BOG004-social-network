@@ -15,7 +15,7 @@ export default () => {
     <div id="notification"> </div>
     <p class="text">Nueva contraseña</p>
     <input class="password" type="password" id="password" placeholder="Ingresa tu contraseña">
-    <button class="botons" type="submit" id="create-account">CREAR CUENTA</button>
+    <button class="botons-r" type="submit" id="create-account">CREAR CUENTA</button>
     </form>
     </div>
     `;
