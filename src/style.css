@@ -1,7 +1,9 @@
+/*Vista Home*/
 body {
  background-image: url("https://i.imgur.com/EcK1kXZ.png");
  margin: 0;
- /* background: ; */
+ background-position: center;
+ background-attachment: fixed;
 }
 
 #home {
@@ -125,7 +127,7 @@ body {
  padding: 10px 0px 0px 0px;
 }
 
-/*formulario de registro*/
+/*Vista register*/
 #register {
   width: 70%;
   height: 71vh;
@@ -192,7 +194,7 @@ body {
   margin-right: auto;
 }
 
-/* Vista muro */
+/*Vista muro*/
 #wall {
   width: 70%;
   height: 34vh;
@@ -250,7 +252,6 @@ body {
  font-weight: bold;
 }
 
-
 #comentText{
   width: 190px;
   padding: 6px 10px 6px 10px;
@@ -276,7 +277,6 @@ body {
   margin-top: 5%;
   background-color: #ffffff95;
   border-radius: 20px;
-  /* text-align: center; */
   font-family: Arial;
   padding: 3px;
 }
@@ -332,7 +332,7 @@ body {
 
 
 @media only screen and (min-width: 768px) {
-
+ /*Vista home*/
   .headerImage {
     width: 50%;
   }
@@ -368,8 +368,7 @@ body {
     font-size: 15px;
   }
 
-  /* Vista Register */
-
+ /* Vista Register */
   #register {
     height: 63vh;
     margin-top: 135px;
@@ -397,8 +396,7 @@ body {
     font-size: 15px;
   }
 
-  /* Vista Muro */
-
+ /* Vista Muro*/
   #wall {
     height: 38vh;
   }
@@ -467,53 +465,72 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
-
-  /* #home {
-    display: grid;
-    grid-template-columns: repeat(1fr, 1fr);
-  } */
-
-  /* .headerImage {
+ /*Vista home*/
+  #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 57vh;
+    margin-top: 153px;
+  }
+  
+  #leftColumn {
     width: 50%;
   }
 
-  .text-welcome {
-    font-size: 16px;
-    margin-top: 18px;
-  } */
-/* 
-  #btn-google {
-    width: 42%;
-    font-size: 15px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  #rightColumn {
+    width: 50%;
+  }
+ 
+  .headerImage {
+    width: 60%;
   }
 
+  .headerImage2 {
+    width: 92%;
+  }
+
+  .text-welcome {
+    font-size: 20px;
+    margin-top: 25px;
+  } 
+
+  #btn-google {
+    width: 55%;
+    font-size: 20px;
+    padding: 8px 12px 8px 12px
+  }
+
+  .logoGoogle {
+    width: 20%;
+  }
+  
  .text {
     font-size: 15px;
   }
 
   .email {
     font-size: 20px;
+    width: 55%;
   }
 
   .password {
     font-size: 20px;
+    width: 55%;
   }
 
   .botons {
-    font-size: 15px;
-    padding: 8px 18px 8px 18px;
+    font-size: 20px;
+    padding: 9px 19px 9px 19px;
   }
 
   #footer {
-    font-size: 14px;
-  }  */
+    font-size: 17px;
+  }  
  
-  /* Vista Register */
-
+ /* Vista Register */
   #register {
-    height: 73vh;
+    height: 74vh;
     margin-top: 112px;
   }
 
@@ -543,4 +560,60 @@ body {
     font-size: 20px;
   }
   
+ /*Vista Muro*/
+  #userName {
+    font-size: 20px;
+  }
+
+  #comentText {
+    width: 355px;
+    margin-left: 24%;
+    font-size: 18px;
+  }
+
+  #sign-off {
+    width: 50px;
+    height: 50px;
+    padding: 2px 6px 1px 6px;
+    margin-right: 25px;
+  }
+
+  #logoExit {
+    width: 38px;
+  }
+
+  #postText {
+    font-size: 20px;
+    padding: 8px 14px 8px 14px;
+    margin-top: 12px;
+  }
+
+  #wall {
+    height: 44vh;
+  }
+
+  .author {
+    font-size: 20px;
+  }
+
+  .postUser {
+    width: 355px;
+    font-size: 18px;
+  } 
+
+  .btn-delete {
+    width: 30px;
+  }
+
+  .btn-edit {
+    width: 30px;
+  }
+  
+  .btn-like {
+    width: 30px;
+  }
+
+  #counter {
+    font-size: 20px;
+  }
 }

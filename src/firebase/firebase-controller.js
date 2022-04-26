@@ -11,7 +11,7 @@ export const register = (email, password) => {
       window.location.hash = '#/wall';
       /* console.log(response)
       saveUserName(name, lastname, response.user.uid) */
-    });
+    }).catch(err => console.log(err))
     
 };
 /*Logueo con cuenta google*/
@@ -24,12 +24,13 @@ export const gmail = () => {
       // const user = result.user;
       changeView('#/wall')
     })
-    // .catch((error) => {
+     .catch((error) => {
+       console.log(error)
     //   const errorCode = error.code;
     //   const errorMessage = error.message;
     //   const email = error.email;
     //   const credential = GoogleAuthProvider.credentialFromError(error);
-    // });
+     });
 };
 
 export const signIn = (email, password) => {
@@ -40,7 +41,7 @@ export const signIn = (email, password) => {
   .then(() => {
     // Signed in
     changeView('#/wall')
-  })
+  }).catch(err => console.log(err))
   
 };
 
