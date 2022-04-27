@@ -1,0 +1,619 @@
+/*Vista Home*/
+body {
+ background-image: url("https://i.imgur.com/EcK1kXZ.png");
+ margin: 0;
+ background-position: center;
+ background-attachment: fixed;
+}
+
+#home {
+  width: 70%;
+  height: 87vh;
+  background-color: #ffffff95;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 20px;
+}
+
+.botonsHome li {
+ list-style: none;
+}
+
+.headerImage {
+ width: 57%;
+ display: flex;
+ align-content: center;
+ justify-content: center;
+ margin: auto;
+ border-radius: 20px;
+ padding: 11px;
+}
+
+.headerImage2 {
+  width: 70%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 8px auto;
+}
+ 
+.text-welcome {
+ text-align: center;
+ font-size: 13px;
+ font-family: Arial;
+ color: #404040;
+ padding: 0px 10px 0px 10px;
+}
+
+#btn-google {
+ width: 65%;
+ margin-top: 20px;
+ padding: 8px 0px 8px 0px;
+ font-family: Arial;
+ font-size: 12px;
+ font-weight: bold;
+ background-color: #ffb977;
+ border: none;
+ border-radius: 10px;
+ box-shadow: 2px 8px 8px rgb(117, 115, 115);
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.logoGoogle {
+  width: 14%;
+}
+
+.text {
+ margin-top: 22px;
+ font-family: Arial;
+ font-size: 13px;
+ text-align: center;
+ font-weight: bold;
+}
+
+.email {
+ margin-top: 10px;
+ font-family: Arial;
+ font-size: 13px;
+ border: 1px solid black;
+ display: flex;
+ margin: auto;
+ text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
+}
+
+.password {
+ margin-top: 10px;
+ font-family: Arial;
+ font-size: 13px;
+ border: 1px solid black;
+ display: flex;
+ margin: auto;
+ text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
+}
+
+.botons {
+ margin-top: 6px;
+ padding: 7px 17px 7px 17px;
+ font-family: Arial;
+ font-size: 12px;
+ font-weight: bold;
+ background-color: #ffb977;
+ border: none;
+ border-radius: 10px;
+ box-shadow: 2px 8px 8px rgb(117, 115, 115);
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#footer {
+ margin-top: 45px; 
+ text-align: center;
+ font-family: Arial;
+ font-size: 11px;
+ background-color: #ffb977;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 21px;
+ padding: 10px 0px 0px 0px;
+}
+
+/*Vista register*/
+#register {
+  width: 70%;
+  height: 71vh;
+  background-color: #ffffff95;
+  margin: auto;
+  margin-top: 54px;
+  border-radius: 20px;
+}
+
+.headerImage3 {
+  width: 85%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+}
+ 
+#textRegister {
+ margin-top: -5px;  
+ font-family: Arial;
+ font-size: 18px;
+ font-weight: bold;
+ text-align: center;
+}
+
+#name {
+ margin-top: 10px;
+ font-family: Arial;
+ font-size: 13px;
+ border: 1px solid black;
+ display: flex;
+ margin: auto;
+ text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
+}
+
+#lastName {
+ margin-top: 10px;
+ font-family: Arial;
+ font-size: 13px;
+ border: 1px solid black;
+ display: flex;
+ margin: auto;
+ text-align: center;
+ padding: 8px 14px 8px 14px;
+ border-radius: 8px;
+}
+
+.botons-r {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding: 7px 17px 7px 17px;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ffb977;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 8px 8px rgb(117 115 115);
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Vista muro*/
+#wall {
+  width: 70%;
+  height: 34vh;
+  background-color: #ffffff95;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 20px;
+}
+
+#signOff{
+ display: flex;
+}
+
+#sign-off{
+ border: none;
+ background-color:  #ffb977;
+ border-radius: 50%;
+ display: block;
+ width: 30px;
+ height: 30px;
+ padding: 1px 5px 0px 5px;
+ margin-top: 10px;
+ margin-right: 10px;
+ box-shadow: 2px 8px 8px rgb(117 115 115);
+}
+
+#logoExit {
+  width: 21px;
+}
+
+#logoSmall{
+  width: 75%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+
+#profile{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 5%;
+}
+
+#userlogo{
+ width:10%;
+ height: 10%;
+ margin-right: 2%;
+}
+
+#userName{
+ font-family: Arial;
+ font-size: 13px;
+ font-weight: bold;
+}
+
+#comentText{
+  width: 190px;
+  padding: 6px 10px 6px 10px;
+  margin-top: 5%;
+  margin-left: 9%;
+  border: 1px solid black;
+  font-family: arial;
+  font-size: 12px;
+}
+
+#text{
+ justify-content: center;
+}
+
+#postText{
+ font-size: 12px;
+ padding: 6px 12px 6px 12px;
+ margin-top: 6px;
+}
+.postPublications{
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: #ffffff95;
+  border-radius: 20px;
+  font-family: Arial;
+  padding: 3px;
+}
+
+.postPublications:last-child{
+  margin-bottom: 70px;
+}
+
+.author {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+.postUser {
+  width: 190px;
+  font-size: 12px;
+  border: solid 1px black;
+  margin: auto;
+  word-wrap: break-word;
+  padding: 0px 10px 0px 10px;
+}
+
+#btnsPost {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 30px;
+  margin-top: 10px;
+  padding: 7px;
+}
+
+.btn-delete {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-edit {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-like {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+#counter {
+  align-self: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+ /*Vista home*/
+  .headerImage {
+    width: 50%;
+  }
+
+  .text-welcome {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+
+  #btn-google {
+    width: 42%;
+    font-size: 15px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .email {
+    font-size: 15px;
+  }
+
+  .password {
+    font-size: 15px;
+  }
+
+  .botons {
+    font-size: 15px;
+    padding: 8px 18px 8px 18px;
+  }
+
+  #footer {
+    font-size: 15px;
+  }
+
+ /* Vista Register */
+  #register {
+    height: 63vh;
+    margin-top: 135px;
+  }
+
+  .headerImage3 {
+    width: 80%;
+  }
+
+  #textRegister {
+    font-size: 24px;
+  }
+
+  #name {
+    font-size: 15px;
+  }
+
+  #lastName {
+    font-size: 15px;
+  }
+
+  .botons-r {
+    margin-top: 22px;
+    padding: 8px 18px 8px 18px;
+    font-size: 15px;
+  }
+
+ /* Vista Muro*/
+  #wall {
+    height: 38vh;
+  }
+
+  #logoSmall {
+    margin-top: 15px;
+  }
+
+  #sign-off {
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+
+  #logoExit {
+    width: 32px;
+  }
+
+  #userName {
+    font-size: 18px;
+  }
+
+  #profile {
+    margin-top: 3%;
+  }
+
+  #comentText {
+    width: 300px;
+    margin-top: 4%;
+    margin-left: 20%;
+    font-size: 16px;
+  }
+
+  #postText {
+    font-size: 18px;
+    padding: 7px 13px 7px 13px;
+    margin-top: 10px;
+  }
+
+  .author {
+    font-size: 18px;
+  }
+
+  .postUser {
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .btn-delete {
+    width: 26px;
+  }
+
+  .btn-edit {
+    width: 26px;
+  }
+
+  .btn-like {
+    width: 26px;
+  }
+
+  #counter {
+    font-size: 18px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+ /*Vista home*/
+  #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 57vh;
+    margin-top: 153px;
+  }
+  
+  #leftColumn {
+    width: 50%;
+  }
+
+  #rightColumn {
+    width: 50%;
+  }
+ 
+  .headerImage {
+    width: 60%;
+  }
+
+  .headerImage2 {
+    width: 92%;
+  }
+
+  .text-welcome {
+    font-size: 20px;
+    margin-top: 25px;
+  } 
+
+  #btn-google {
+    width: 55%;
+    font-size: 20px;
+    padding: 8px 12px 8px 12px
+  }
+
+  .logoGoogle {
+    width: 20%;
+  }
+  
+ .text {
+    font-size: 15px;
+  }
+
+  .email {
+    font-size: 20px;
+    width: 55%;
+  }
+
+  .password {
+    font-size: 20px;
+    width: 55%;
+  }
+
+  .botons {
+    font-size: 20px;
+    padding: 9px 19px 9px 19px;
+  }
+
+  #footer {
+    font-size: 17px;
+  }  
+ 
+ /* Vista Register */
+  #register {
+    height: 74vh;
+    margin-top: 112px;
+  }
+
+  .headerImage3 {
+    width: 75%;
+  }
+
+  #textRegister {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  #name {
+    font-size: 20px;
+  }
+
+  #lastName {
+    font-size: 20px;
+  }
+
+  .botons-r {
+    margin-top: 30px;
+    padding: 9px 19px 9px 19px;
+    font-size: 20px;
+  }
+  
+ /*Vista Muro*/
+  #userName {
+    font-size: 20px;
+  }
+
+  #comentText {
+    width: 355px;
+    margin-left: 24%;
+    font-size: 18px;
+  }
+
+  #sign-off {
+    width: 50px;
+    height: 50px;
+    padding: 2px 6px 1px 6px;
+    margin-right: 25px;
+  }
+
+  #logoExit {
+    width: 38px;
+  }
+
+  #postText {
+    font-size: 20px;
+    padding: 8px 14px 8px 14px;
+    margin-top: 12px;
+  }
+
+  #wall {
+    height: 44vh;
+  }
+
+  .author {
+    font-size: 20px;
+  }
+
+  .postUser {
+    width: 355px;
+    font-size: 18px;
+  } 
+
+  .btn-delete {
+    width: 30px;
+  }
+
+  .btn-edit {
+    width: 30px;
+  }
+  
+  .btn-like {
+    width: 30px;
+  }
+
+  #counter {
+    font-size: 20px;
+  }
+}
