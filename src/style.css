@@ -8,7 +8,7 @@ body {
 
 #home {
   width: 70%;
-  height: 87vh;
+  /* height: 87vh; */
   background-color: #ffffff95;
   margin: auto;
   margin-top: 7%;
@@ -130,7 +130,7 @@ body {
 /*Vista register*/
 #register {
   width: 70%;
-  height: 71vh;
+  /* height: 71vh; */
   background-color: #ffffff95;
   margin: auto;
   margin-top: 54px;
@@ -197,7 +197,7 @@ body {
 /*Vista muro*/
 #wall {
   width: 70%;
-  height: 34vh;
+ /*  height: 34vh; */
   background-color: #ffffff95;
   margin: auto;
   margin-top: 7%;
@@ -333,6 +333,10 @@ body {
 
 @media only screen and (min-width: 768px) {
  /*Vista home*/
+  #home {
+    width: 70%;
+  }
+
   .headerImage {
     width: 50%;
   }
@@ -370,9 +374,10 @@ body {
 
  /* Vista Register */
   #register {
-    height: 63vh;
-    margin-top: 135px;
-  }
+   /*  height: 63vh; */
+    /* margin-top: 135px; */
+    width: 70%;
+  } 
 
   .headerImage3 {
     width: 80%;
@@ -398,8 +403,9 @@ body {
 
  /* Vista Muro*/
   #wall {
-    height: 38vh;
-  }
+    /* height: 38vh;*/
+    width: 70%;
+  } 
 
   #logoSmall {
     margin-top: 15px;
@@ -470,8 +476,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;  
-    height: 57vh;
-    margin-top: 153px;
+  /*   height: 57vh; */
+    /* margin-top: 153px; */
+    width: 50%;
   }
   
   #leftColumn {
@@ -496,7 +503,7 @@ body {
   } 
 
   #btn-google {
-    width: 55%;
+    width: 65%;
     font-size: 20px;
     padding: 8px 12px 8px 12px
   }
@@ -511,12 +518,12 @@ body {
 
   .email {
     font-size: 20px;
-    width: 55%;
+    /* width: 55%; */
   }
 
   .password {
     font-size: 20px;
-    width: 55%;
+    /* width: 55%; */
   }
 
   .botons {
@@ -530,9 +537,11 @@ body {
  
  /* Vista Register */
   #register {
-    height: 74vh;
-    margin-top: 112px;
-  }
+    /* height: 74vh;  
+    margin-top: 112px;*/
+    width: 50%;
+    margin-top: 10px;
+  } 
 
   .headerImage3 {
     width: 75%;
@@ -555,12 +564,16 @@ body {
   }
 
   .botons-r {
-    margin-top: 30px;
+    margin-top: 15px;
     padding: 9px 19px 9px 19px;
     font-size: 20px;
   }
   
  /*Vista Muro*/
+ #wall {
+  width: 50%;
+ }
+
   #userName {
     font-size: 20px;
   }
@@ -569,6 +582,10 @@ body {
     width: 355px;
     margin-left: 24%;
     font-size: 18px;
+  }
+
+  .postPublications{
+    width: 50%;
   }
 
   #sign-off {
@@ -588,10 +605,10 @@ body {
     margin-top: 12px;
   }
 
-  #wall {
+  /* #wall {
     height: 44vh;
   }
-
+ */
   .author {
     font-size: 20px;
   }
